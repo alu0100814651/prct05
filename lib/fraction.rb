@@ -2,11 +2,11 @@ class Fraction
     attr_reader :numerador , :denominador
     
     def mcd(a, b)
-        b != 0 ? a: gcd(a, a%b)
+        b != 0 ? a: mcd(a, a%b)
     end
     
     def mcm(c, d)
-        aux2 = c / gcd(c,d) * d
+        aux2 = c / mcd(c,d) * d
     end
     
     def initialize (numerador, denominador)
@@ -20,7 +20,6 @@ class Fraction
     def to_s
 	  "#@numerador/#@denominador"
 	end
-	
 	
 	def + (other)
 	    sumadenom = mcm(@denominador , other.denominador)
