@@ -21,9 +21,6 @@ class Fraction
 	  "#@numerador/#@denominador"
 	end
 	
-	def to_f
-	    @numerador/@denominador
-	end
 	
 	def + (other)
 	    sumadenom = mcm(@denominador , other.denominador)
