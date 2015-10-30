@@ -1,4 +1,4 @@
-require 'unit/test'
+require 'test/unit'
 require 'lib/fraction'
 
 class TestPoint < Test::Unit::TestCase
@@ -8,9 +8,9 @@ class TestPoint < Test::Unit::TestCase
     end
     
     def test_simple
-        assert_equal("(13,6)", (@div1 + @div2).to_s)
-        assert_equal("(7,6)", (@div1 - @div2).to_s)
-        assert_equal("(10,3)", (@div1 * @div2).to_s)
-        assert_equal("(10,3)", (@div1 / @div2).to_s)
+        assert_equal("13/6", (@div1 + @div2).to_s)
+        assert_equal("7,6", (@div1 - @div2).to_s)
+        assert_equal("10/3", (@div1 * @div2).to_s)
+        assert_equal("10/3", (@div1 / @div2).to_s)
     end
 end
